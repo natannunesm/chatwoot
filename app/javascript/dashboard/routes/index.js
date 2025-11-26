@@ -7,6 +7,14 @@ import { validateLoggedInRoutes } from '../helper/routeHelpers';
 import AnalyticsHelper from '../helper/AnalyticsHelper';
 
 const routes = [...dashboard.routes];
+  {
+    path: '/crm-kanban',
+    name: 'crm_kanban',
+    component: () => import('../modules/crm_kanban/CrmKanban.vue'),
+    meta: { requiresAuth: true },
+  },
+];
+
 
 export const router = createRouter({ history: createWebHistory(), routes });
 
